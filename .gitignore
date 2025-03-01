@@ -1,0 +1,108 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+venv.bak/
+.pep8
+migrations/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Test and coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+*.cover
+.coverage.*
+*.py,cover
+.hypothesis/
+pytest_cache/
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+*.log
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint
+.pylint.d/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+*.pid
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyInstaller
+*.spec
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+*.sh
+
+# Jupyter Notebook Extensions
+.jupyter/
+.ipython/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
