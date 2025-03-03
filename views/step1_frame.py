@@ -158,47 +158,27 @@ class Step1Frame(tk.Frame):
         self.controller.transition_probability_grid_initiated = True
     
     def check_data(self):
-        """Validate the data before proceeding to next step
-        
-        Returns:
-            bool: True if data is valid, False otherwise
-        """
-        
         try:
             source_count = int(self.source_count_entry.get())
             time_limit = int(self.time_limit_entry.get())
             
-            
             self.controller.source_count = source_count
             self.controller.time_limit = time_limit
-            
             
             if not self.controller.transition_probability_grid_initiated:
                 self.initialize_transition_probability_grid()
                 return False
             
-            
             for i in range(source_count):
-                row_sum = 0.0
                 for j in range(source_count):
                     try:
-                        value = float(self.cells[i][j].get())
-                        row_sum += value
+                        float(self.cells[i][j].get())
                     except ValueError:
                         messagebox.showerror(
                             "Ошибка ввода данных",
                             f"В ячейке [{i+1},{j+1}] введено неверное значение"
                         )
                         return False
-                
-                
-                if abs(row_sum - 1.0) > 0.0001:
-                    messagebox.showerror(
-                        "Ошибка ввода данных",
-                        f"В колонке №{i+1} сумма значений не равна единице"
-                    )
-                    return False
-            
             
             self.controller.P = [0.0] * source_count
             for i in range(source_count):
